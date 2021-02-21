@@ -63,7 +63,7 @@ return score;
 };
 
 let scrabbleScore = function(word){
- word = word.toUpperCase();
+ word = word.toLowerCase();
 	let totalScore = 0;
  
 	for (let i = 0; i < word.length; i++) {
@@ -89,7 +89,7 @@ function transform(oldPointStructure) {
   let transformValue = {};
   for (const pointValue in oldPointStructure) {
     for (let i=0; i<oldPointStructure[pointValue].length; i++){
-    transformValue[oldPointStructure[pointValue][i]] = parseInt(pointValue); 
+    transformValue[oldPointStructure[pointValue][i].toLowerCase()] = parseInt(pointValue); 
     }
   
   }
