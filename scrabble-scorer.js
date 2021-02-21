@@ -74,9 +74,9 @@ let scrabbleScore = function(word){
 };
 
 const scoringAlgorithms = [
-  {name: "Simple Score", description: "Each letter is worth 1 point. ", scoreFunction: simpleScore  },
-  {name: "Bonus Vowels", description: "Vowels are 3 pts, consonants are 1 pt. ", scoreFunction: vowelBonusScore   },
-  {name: "Scrabble", description: "The traditional scoring algorithm. ", scoreFunction: scrabbleScore   },
+  {name: "Simple Score", description: "Each letter is worth 1 point. ", scoringFunction: simpleScore  },
+  {name: "Bonus Vowels", description: "Vowels are 3 pts, consonants are 1 pt. ", scoringFunction: vowelBonusScore   },
+  {name: "Scrabble", description: "The traditional scoring algorithm. ", scoringFunction: scrabbleScore   },
 ];
 
 function scorerPrompt() {
@@ -104,7 +104,7 @@ function runProgram() {
       let inputScrableScore = initialPrompt();
       let scoringAlgorithm = scorerPrompt();
 
-      console.log(`Score for ${inputScrableScore} is: `+ scoringAlgorithm.scoreFunction(inputScrableScore));
+      console.log(`Score for ${inputScrableScore} is: `+ scoringAlgorithm.scoringFunction(inputScrableScore));
    
 
    return inputScrableScore
